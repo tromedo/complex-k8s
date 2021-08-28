@@ -12,7 +12,7 @@ spec:
       labels:
         component: server
     spec:
-      container:
+      containers:
         - name: server
           image: stephengrider/multi-server
           ports:
