@@ -15,7 +15,7 @@ before_install:
   - gcloud config set compute/zone asia-south1-a
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build - tromedo/react-test -f ./client/Dockerfile.dev ./client
+  - docker build -t tromedo/react-test -f ./client/Dockerfile.dev ./client
 
   script:
     - docker run -e CI=true tromedo/react-test npm test
