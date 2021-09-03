@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+
+kind: Certificate
+metadata:
+  name: sscglobalinc-com-tls
+spec:
+  secretName: sscglobalinc-com
+  issuerRef:
+    name: letencrypt-prod
+    kind: ClusterIssuer
+  commonName: sscglobalinc.com
+  dnsNames:
+    - sscglobalinc.com
+    - www.sscglobalinc.com
