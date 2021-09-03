@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: sscglobalinc-com
   issuerRef:
-    name: letencrypt-prod
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: sscglobalinc.com
   dnsNames:
